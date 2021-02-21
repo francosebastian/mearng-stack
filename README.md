@@ -19,22 +19,22 @@ Docker Engine
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
+_Para asegurarnos de que nuestro entorno de desarrolo en Docker este limpio ejecutamos el comando_
 
 ```
-npm install
+docker-compose down
 ```
 
-_Para crear los contenedores debemos correr el siguiente comando_
+_Para hacer el build los contenedores y correr con docker-compose_
 
 ```
-docker-compose build
+docker-compose up --build
 ```
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
+Una vez que los contenedores terminan su ejecucion correctamente puedes ir al navegador para ver el demo de Graph-QL
+```
+http://localhost:5000
+```
 ## Ejecutando las pruebas ⚙️
 
 _Explica como ejecutar las pruebas automatizadas para este sistema_

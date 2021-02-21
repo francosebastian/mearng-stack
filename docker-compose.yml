@@ -24,6 +24,6 @@ services:
       expose:
         - "27017"
       volumes:
-        - /Users/franco/mongodata:/data/db
+        - /$HOME/docker/volumes/mongodata:/data/db
 volumes:
   node_modules:

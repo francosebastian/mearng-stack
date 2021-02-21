@@ -2,21 +2,28 @@
 # docker-compose.yml - aplicación en node.js - Express
 ############################################################
 
-# version 2
+version: '3'
 services:
     web:
       build: .
+      restart: always
       depends_on:
         - db
       ports:
         - 5000:5000
       volumes:
-        - /opt/app
-
+        - ./src:/opt/app/
+        - node_modules:/opt/app/node_modules
+      links:
+        - db
     db:
       image: mongo
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: admin
+        MONGO_INITDB_ROOT_PASSWORD: pass
       expose:
         - "27017"
       volumes:
-      - /home/<user>/mongodata:/data/db
-
+        - /Users/franco/mongodata:/data/db
+volumes:
+  node_modules:

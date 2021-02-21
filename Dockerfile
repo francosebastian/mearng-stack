@@ -18,11 +18,11 @@ RUN mkdir -p /opt/app
 WORKDIR /opt/app
 
 # Instala los paquetes existentes en el package.json
-COPY package*.json ./
+COPY package.json package-lock.json ./
 RUN npm install --quiet
 
 # Copia la Aplicación
-COPY . .
+COPY ./src .
 
 # Expone la aplicación en el puerto 5000
 EXPOSE 5000

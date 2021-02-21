@@ -1,4 +1,4 @@
-# MEARNG Stack Demo 2021
+# MERNG Stack Demo 2021
 
 _Este Stack es la mezcla de Mongo db, Express, React, Node y GraphQL_
 
@@ -24,13 +24,13 @@ _Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener 
 _Dí cómo será ese paso_
 
 ```
-Da un ejemplo
+npm install
 ```
 
-_Y repite_
+_Para crear los contenedores debemos correr el siguiente comando_
 
 ```
-hasta finalizar
+docker-compose build
 ```
 
 _Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_

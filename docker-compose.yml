@@ -12,8 +12,8 @@ services:
       ports:
         - 5000:5000
       volumes:
-        - ./src:/opt/app/
-        - node_modules:/opt/app/node_modules
+        - ./src:/opt/app
+        - /opt/app/node_modules
       links:
         - db
     db:
@@ -25,5 +25,3 @@ services:
         - "27017"
       volumes:
         - /$HOME/docker/volumes/mongodata:/data/db
-volumes:
-  node_modules:
